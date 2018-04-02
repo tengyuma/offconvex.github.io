@@ -28,7 +28,7 @@ Consider possibly the most trivial Lyapunov function, the (squared) distance to 
  
 Even when the function is nonconvex, there always *exist* update directions that reduce this $V()$ (though finding them may not be easy).  Simple algebraic manipulation shows that when the learning rate $\eta$ is small enough, then for $V(z_{k+1}) \le V(z_k)$, it is necessary and sufficient to have $\langle g_k, z_k-z^* \rangle \ge 0$. 
 
-  <img src="http://www.cs.princeton.edu/~tengyu/angle_for_blog_post.png" alt="correlation condition" style ="float:left" height="240.8" width="260"/> As illustrated in the figure on the left, $z^* - z_k$ is the ideal direction that we desire to move to, and $-g_k$ is the direction that we actually move to. To establish convergence, it suffices to verify that the direction of movement is positively correlated with the desired direction. 
+  <img src="http://ai.stanford.edu/~tengyuma/forblog/ai.png" alt="correlation condition" style ="float:left" height="240.8" width="260"/> As illustrated in the figure on the left, $z^* - z_k$ is the ideal direction that we desire to move to, and $-g_k$ is the direction that we actually move to. To establish convergence, it suffices to verify that the direction of movement is positively correlated with the desired direction. 
 
 To get quantitative bounds on running time, we need to ensure that $V(z_k)$ not only decreases, but does so rapidly. The next condition formalizes this: intuitively speaking it says that $-g_k$ and $z^*-z_k$ make an angle strictly less than 90 degrees. 
 
